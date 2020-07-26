@@ -1,4 +1,17 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+        classpath "org.jacoco:org.jacoco.core:0.8.3"
+        classpath "org.jacoco:org.jacoco.agent:0.8.2"
+    }
+}
+
+
 apply plugin: 'com.android.application'
+//apply plugin: 'jacoco-android'
 
 android {
     compileSdkVersion 29
@@ -36,14 +49,9 @@ dependencies {
 
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+
+
 }
 
-buildscript {
-    dependencies {
-        classpath('com.hiya:jacoco-android:0.2') {
-            exclude group: 'org.codehaus.groovy', module: 'groovy-all'
-        }
-    }
-}
 
-apply plugin: 'jacoco-android'
+
