@@ -22,12 +22,14 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run: mvn integration-test cobertura:cobertura
+
       - run:
           name: Run Tests
           command: ./gradlew lint test
       - run: ./gradlew  jacocoDebug
       - run: ./gradlew test jacocoTestReport
+      - run: mkdir -p $CIRCLE_TEST_REPORTS/jacoco/
+      
       - store_artifacts: #  for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: app/build/reports
           destination: reports
