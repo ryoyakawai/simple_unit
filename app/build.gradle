@@ -24,6 +24,8 @@ android {
     }
 }
 
+
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
@@ -35,3 +37,13 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
 }
+
+buildscript {
+    dependencies {
+        classpath('com.dicedmelon.gradle:jacoco-android:0.1.2') {
+            exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+        }
+    }
+}
+
+apply plugin: 'jacoco-android'
