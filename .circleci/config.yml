@@ -26,9 +26,7 @@ jobs:
       - run:
           name: Run Tests
           command: ./gradlew lint test jacocoTestReport
-      #- run: ./gradlew jacocoTestPaidDebugUnitTestReport
-      #- run: ./gradlew test jacocoTestReport
-      - run: bash <(curl -s https://codecov.io/bash)
+
       - store_artifacts: #  for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: app/build/reports
           destination: reports

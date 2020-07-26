@@ -1,7 +1,5 @@
 buildscript {
     repositories {
-//        mavenLocal()
-//        mavenCentral()
         google()
         jcenter()
         maven {
@@ -9,12 +7,6 @@ buildscript {
         }
     }
     dependencies {
-        //classpath 'com.android.tools.build:gradle:2.0.0'
-        classpath "org.jacoco:org.jacoco.core:0.8.3"
-        classpath "org.jacoco:org.jacoco.agent:0.8.2"
-        //classpath "com.dicedmelon.gradle:jacoco-android:0.1.1"
-        //classpath "com.hiya:jacoco-android:0.2"
-//        classpath "org.jacoco:org.jacoco.core:0.8.3"
         classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "com.hiya:jacoco-android:0.2"
     }
@@ -23,9 +15,7 @@ buildscript {
 apply plugin: 'com.android.application'
 //apply plugin: 'jacoco-android'
 
-//jacoco {
-//    toolVersion = "0.8.4"
-//}
+
 android {
     compileSdkVersion 29
 
