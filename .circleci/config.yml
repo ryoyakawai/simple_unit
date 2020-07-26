@@ -28,7 +28,7 @@ jobs:
           command: ./gradlew lint test
       - run: ./gradlew  jacocoDebug
       - run: ./gradlew test jacocoTestReport
-      - chown -R $USER:$USER /path/to/directory
+      - run: chown -R $USER:$USER /path/to/directory
 
       - run: mkdir -p /path/to/directory/jacoco/
       - run: cp -r ./build/reports/jacoco/test/* $CIRCLE_TEST_REPORTS/jacoco
