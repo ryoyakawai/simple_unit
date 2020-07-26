@@ -26,6 +26,7 @@ jobs:
           name: Run Tests
           command: ./gradlew lint test
       - run: ./gradlew  jacocoDebug
+      - run: gradle test
       - run: ./gradlew test jacocoTestReport
       - store_artifacts: #  for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
           path: app/build/reports
