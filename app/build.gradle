@@ -58,6 +58,7 @@ jacoco {
 //}
 
 task jacocoTestReport(type: JacocoReport)  {
+    group = "Reporting"
         executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
 
     subprojects.each {
