@@ -29,7 +29,6 @@ jobs:
       - run: ./gradlew  jacocoDebug
       - run: ./gradlew test jacocoTestReport
       - run: chown -R $USER:$USER /path/to/directory
-
       - run: mkdir -p /path/to/directory/jacoco/
       - run: cp -r ./build/reports/jacoco/test/* $CIRCLE_TEST_REPORTS/jacoco
       - run: bash <(curl -s https://codecov.io/bash)
