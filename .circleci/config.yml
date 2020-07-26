@@ -22,6 +22,7 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+      - run: mvn integration-test cobertura:cobertura
       - run:
           name: Run Tests
           command: ./gradlew lint test
