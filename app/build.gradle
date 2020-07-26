@@ -37,10 +37,18 @@ android {
             testCoverageEnabled true
         }
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
+    }
 }
 
 jacoco {
-    toolVersion "0.8.0"
+    toolVersion "0.8.5"
 }
 
 //task jacocoTestReport(type: JacocoReport) {
