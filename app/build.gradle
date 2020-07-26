@@ -1,3 +1,5 @@
+
+
 buildscript {
     repositories {
         mavenLocal()
@@ -7,12 +9,14 @@ buildscript {
         classpath 'com.android.tools.build:gradle:2.0.0'
         classpath "org.jacoco:org.jacoco.core:0.8.3"
         classpath "org.jacoco:org.jacoco.agent:0.8.2"
+        //classpath "com.dicedmelon.gradle:jacoco-android:0.1.2"
+        //classpath "com.hiya:jacoco-android:0.2"
+        classpath "org.jacoco:org.jacoco.core:0.8.3"
     }
 }
 
-
 apply plugin: 'com.android.application'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco-android'
 
 
 android {
@@ -47,9 +51,7 @@ android {
     }
 }
 
-jacoco {
-    toolVersion "0.8.5"
-}
+
 
 //task jacocoTestReport(type: JacocoReport) {
 //    executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
