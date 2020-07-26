@@ -1,9 +1,8 @@
-
-
 buildscript {
     repositories {
         mavenLocal()
         mavenCentral()
+ //       jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
@@ -16,7 +15,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-//apply plugin: 'jacoco-android'
+apply plugin: 'jacoco'
 
 
 android {
