@@ -19,6 +19,14 @@ apply plugin: 'com.hiya.jacoco-android'
 jacoco {
     toolVersion = "0.8.4"
 }
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+}
+jacocoAndroidUnitTestReport {
+    csv.enabled false
+    xml.enabled false
+    html.enabled true
+}
 
 android {
     compileSdkVersion 28
