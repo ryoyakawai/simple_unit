@@ -65,9 +65,7 @@ android {
 //    }
 //}
 
-
-
-    task TestReport(type: JacocoReport) {
+    task JacocoTestReport(type: JacocoReport) {
 
         group = "testing"
 
@@ -76,9 +74,6 @@ android {
             html.enabled = true
         }
     }
-
-
-
 
 
 dependencies {
