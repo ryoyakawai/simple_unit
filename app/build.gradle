@@ -52,12 +52,12 @@ android {
     }
     testOptions {
 
-            unitTests.all {
-                jacoco {
-                    includeNoLocationClasses = true
-                }
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
             }
-
+        }
+    }
 }
 
 
