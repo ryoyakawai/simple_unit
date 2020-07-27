@@ -16,14 +16,17 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco'
 apply plugin: 'com.hiya.jacoco-android'
+jacoco {
+    toolVersion = "0.8.4"
+}
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
 
     defaultConfig {
         applicationId "com.example.empty"
-        minSdkVersion 29
-        targetSdkVersion 29
+        minSdkVersion 28
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -37,6 +40,14 @@ android {
         }
         debug{
             testCoverageEnabled true
+        }
+    }
+    testOptions {
+        animationsDisabled true
+
+        unitTests {
+            returnDefaultValues true
+            includeAndroidResources true
         }
     }
 }
