@@ -65,18 +65,19 @@ android {
 //    }
 //}
 
-//task jacocoTestReport(type: JacocoReport)  {
-//    group = "Reporting"
-//        executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
-//
-//    subprojects.each {
-//        sourceSets it.sourceSets.main
-//    }
-//    reports {
-//        xml.enabled  false
-//        html.enabled true
-//    }
-//}
+task jacocoTestReport(type: JacocoReport)  {
+    group = "Reporting"
+        executionData fileTree(project.rootDir.absolutePath).include("**/build/jacoco/*.exec")
+
+    subprojects.each {
+        sourceSets it.sourceSets.main
+    }
+    reports {
+        xml.enabled  false
+        html.enabled true
+    }
+}
+
 
 
 
