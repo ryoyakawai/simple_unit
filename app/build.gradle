@@ -13,7 +13,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'jacoco'
+apply plugin: 'com.hiya.jacoco-android'
 
 android {
     compileSdkVersion 29
@@ -52,6 +52,9 @@ task JacocoTestReport(type: JacocoReport) {
             xml.enabled = true
             html.enabled = true
         }
+//    SourceDirectories.setFrom("${projectDir}/src/main/java")
+//    classDirectories.setFrom("${buildDir}/tmp/kotlin-classes/debug")
+//    executionData.setFrom(files("${buildDir}/jacoco/testDebugUnitTest.exec"))
     }
 
 
