@@ -4,7 +4,6 @@
  * https://qiita.com/keidroid/items/adc4f065b84d8a2cd17a
  **/
 
-apply plugin: 'jacoco'
 apply plugin: 'com.hiya.jacoco-android'
 
 jacoco {
