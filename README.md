@@ -37,6 +37,5 @@ $ ./gradlew connectedAndroidTest
 
 - [Test from the command line  |  Android Developers](https://developer.android.com/studio/test/command-line)
 - [Android開発のテストカバー率取得にはこのツールを使い分けると良いという話 - Qiita](https://qiita.com/keidroid/items/adc4f065b84d8a2cd17a)
-[Android開発のテストカバー率取得にはこのツールを使い分けると良いという話 - Qiita](https://qiita.com/keidroid/items/adc4f065b84d8a2cd17a)
 
 
