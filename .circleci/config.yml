@@ -24,16 +24,10 @@ jobs:
       #      - ~/.gradle
       #    key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
-          name: Run Lint Unit Tests
-          command: ./gradlew clean lint test
-      - store_test_results:
-          path: app/build/reports
-          destination: reports
-      - run:
           name: Run Unit Tests
           command: ./gradlew clean jacocoTestReport
       - store_test_results:
-          path: app/build/jacoco/jacocoHtml
+          path: app/build
           destination: reports
       - run:
           name: Build apk
