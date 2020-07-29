@@ -15,7 +15,7 @@ Terminalから以下のコマンドで表示できています。なお、Androi
 
 ## Unit Test, Instrumented Testの両方の結果を取得
 ```bash
-$ ./gradlew clean && ./gradlew build
+$ ./gradlew clean lint test
 $ ./gradlew connectedAndroidTest
 ```
 以上でHTML形式のレポートが `app/build/reports/` にできているはずですのでブラウザで表示してください。  
@@ -23,8 +23,9 @@ $ ./gradlew connectedAndroidTest
 ※1 `./gradlew connectedAndroidTest` はAndroidデバイス（物理or仮想）が接続されていないと動作しません。  
 ※2 テスト開始に失敗する可能性があるので、その場合は何度か試してください。
 
-- `app/build/reports/coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
+- `app/build/reports/lint-results.html ` : Lintの結果レポート
 - `app/build/reports/tests` : ターゲットBuild毎のテスト結果レポート
+- `app/build/reports/coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
 - `app/build/reports/androidTests/connected` : UIテストの結果レポート
 
 ## Unit Testのみの結果を取得
@@ -32,8 +33,8 @@ $ ./gradlew connectedAndroidTest
 $ ./gradlew clean lint jacocoTestReport
 ```
 - `app/build/reports/lint-results.html ` : Lintの結果レポート
-- `app/build/jacoco/jacocoHtml` : UnitTestのみのテスト結果レポート
 - `app/build/reports/tests` : ターゲットBuild毎のテスト結果レポート
+- `app/build/jacoco/jacocoHtml` : UnitTestのみのテスト結果レポート
 
 # 分かったこと
 以下の内容は、100％自信を持ってとは言えない調査レベルで、動作させてみた傾向から以下は言えるだろう、というニュアンスです。
