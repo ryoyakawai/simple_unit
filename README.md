@@ -43,9 +43,28 @@ $ ./gradlew clean lint jacocoTestReport
   - `./gradlew jacocoTestReport` を実施することで、Insttrumentedテストを知なくとも、UIテスト0%の状態で結果を得ることができる。
   - OpenJDKでは動作しない（jdkがAndroid Studioのデフォルトなので、Terminalから動作させる場合のみ注意）
 
+# ライセンス
+Apache License 2.0 です。詳細はLICENSE を御覧ください。
+
+```
+   Copyright 2020 Ryoya Kawai
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+```
+
 
 # 参考サイト
-
 - [Test from the command line  |  Android Developers](https://developer.android.com/studio/test/command-line)
 - [Android開発のテストカバー率取得にはこのツールを使い分けると良いという話 - Qiita](https://qiita.com/keidroid/items/adc4f065b84d8a2cd17a)
 
