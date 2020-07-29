@@ -29,9 +29,9 @@ $ ./gradlew connectedAndroidTest
 # 分かったこと
 以下の内容は、100％自信を持ってとは言えない調査レベルで、動作させてみた傾向から以下は言えるだろう、というニュアンスです。
 
-- JacocoはAndroidアプリ全体に対してカバレッジを表示するので、カバレッジを表示するにはUnitTestのみでは不可能。
-- ./gradlew connectedAndroidTest を実行する際にJacocoが動作する
-- OpenJDKではJacocoは動作しなさそう（jdkがAndroid Studioのデフォルトなので、Terminalから動作させる場合のみ注意）
+- Jacocoに関して
+  - Instrumented Test（`./gradlew connectedAndroidTest`）実行時にCoverageを作成する仕組みのようなので、Instrumented Testを避けUnitTestの実行のみではレポートは作成できなさそう。
+  - OpenJDKでは動作しない（jdkがAndroid Studioのデフォルトなので、Terminalから動作させる場合のみ注意）
 
 
 # 参考サイト
