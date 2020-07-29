@@ -9,13 +9,19 @@ public class CalcTest1 {
     @Test
     public void plus() {
         mcalc = new calc();
-        assertEquals(3, mcalc.plus(2,1),0 );  //Added plus test code
-
+        assertEquals(3, mcalc.plus(2,1),0 );  // Added plus test code
     }
 
     @Test
     public void div() {
         mcalc = new calc();
-        assertEquals(2, mcalc.div(2,1),0 );  //Added div test code
+        assertEquals(2, mcalc.div(2,1),0 );  // Added div test code
     }
+
+    @Test
+    public void div_zero() {
+        mcalc = new calc();
+        assertEquals(0, mcalc.div(2,0),0 );  // Added div test code
+    }
+
 }

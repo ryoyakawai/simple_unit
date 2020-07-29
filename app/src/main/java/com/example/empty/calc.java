@@ -5,7 +5,7 @@ public class calc {
         int c = a + b;
         return c;
     }
-    public int div(int a, int b){
+    public int div(int a, int b) {
         if (b == 0){
             return 0;
         }

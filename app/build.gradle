@@ -3,10 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
 
-    useLibrary 'android.test.runner'
-    useLibrary 'android.test.base'
-    useLibrary 'android.test.mock'
-
     defaultConfig {
         applicationId "com.example.empty"
         minSdkVersion 28

@@ -23,9 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
         int ans00 = cal.div(a, b);
         int ans01 = cal.plus(a, b);
+        int ans02 = cal.plus(a, 0);
 
         Log.d("TEST-DEBUG", Integer.toString(ans00));
         Log.d("TEST-DEBUG", Integer.toString(ans01));
+        Log.d("TEST-DEBUG", Integer.toString(ans02));
 
         return "Hello Android!!";
     }
