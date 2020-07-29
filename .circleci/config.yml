@@ -28,7 +28,7 @@ jobs:
           command: ./gradlew clean jacocoTestReport
       - store_test_results:
           path: app/build
-          destination: reports
+          destination: /reports
       - run:
           name: Build apk
           command: |
