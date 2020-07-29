@@ -13,6 +13,7 @@
 # 動作に関して
 Terminalから以下のコマンドで表示できています。なお、Androidエミュレータを起動したから以下を実行してください。
 
+## Unit Test, Instrumented Testの両方の結果を取得
 ```bash
 $ ./gradlew clean && ./gradlew build
 $ ./gradlew connectedAndroidTest
@@ -24,13 +25,21 @@ $ ./gradlew connectedAndroidTest
 
 - `coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
 - `tests/testDebugUnitTest` : UnitTestのテスト結果レポート
-- `androidTests/connected/` : UIテストの結果レポート
+- `androidTests/connected` : UIテストの結果レポート
+
+## Unit Testのみの結果を取得
+```bash
+$ ./gradlew clean lint jacocoTestReport
+```
+- `app/build/reports/lint-results.html ` : Lintの結果レポート
+- `app/build/jacoco/jacocoHtml` : UnitTestのみのテスト結果レポート
+- `app/build/reports/tests` : ターゲットBuild毎のテスト結果レポート
 
 # 分かったこと
 以下の内容は、100％自信を持ってとは言えない調査レベルで、動作させてみた傾向から以下は言えるだろう、というニュアンスです。
 
 - Jacocoに関して
-  - Instrumented Test（`./gradlew connectedAndroidTest`）実行時にCoverageを作成する仕組みのようなので、Instrumented Testを避けUnitTestの実行のみではレポートは作成できなさそう。
+  - `./gradlew jacocoTestReport` を実施することで、Insttrumentedテストを知なくとも、UIテスト0%の状態で結果を得ることができる。
   - OpenJDKでは動作しない（jdkがAndroid Studioのデフォルトなので、Terminalから動作させる場合のみ注意）
 
 
