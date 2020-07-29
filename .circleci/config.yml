@@ -31,6 +31,10 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/reports/tests
+          destination: reports
+      - store_test_results:
+          path: app/build/jacoco/jacocoHtml
+          destination: reports
       - run:
           name: Build apk
           command: |
