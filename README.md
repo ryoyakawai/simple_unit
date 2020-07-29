@@ -23,9 +23,9 @@ $ ./gradlew connectedAndroidTest
 ※1 `./gradlew connectedAndroidTest` はAndroidデバイス（物理or仮想）が接続されていないと動作しません。  
 ※2 テスト開始に失敗する可能性があるので、その場合は何度か試してください。
 
-- `coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
-- `tests/testDebugUnitTest` : UnitTestのテスト結果レポート
-- `androidTests/connected` : UIテストの結果レポート
+- `app/build/reports/coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
+- `app/build/reports/tests` : ターゲットBuild毎のテスト結果レポート
+- `app/build/reports/androidTests/connected` : UIテストの結果レポート
 
 ## Unit Testのみの結果を取得
 ```bash
