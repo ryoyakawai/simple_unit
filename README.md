@@ -1,7 +1,7 @@
 # simple_unit
 
 # これは何？
-簡単なUnitTestとUIテストを実装し（Java:Android）、JacocoによってCoverageを表示する為のサンプルです。
+簡単なUnitTestとUIテストを実装し（Java:Android）、JaCoCoによってCoverageを表示する為のサンプルです。
 
 # 動作確認環境
 - **macOS** Version: 10.14.6
@@ -25,7 +25,7 @@ $ ./gradlew connectedAndroidTest
 
 - `app/build/reports/lint-results.html ` : Lintの結果レポート
 - `app/build/reports/tests` : ターゲットBuild毎のテスト結果レポート
-- `app/build/reports/coverage` : Jacocoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
+- `app/build/reports/coverage` : JaCoCoからのカバレッジレポート（UnitTestとUIテストが統合されて表示されます）
 - `app/build/reports/androidTests/connected` : UIテストの結果レポート
 
 ## Unit Testのみの結果を取得
@@ -39,7 +39,7 @@ $ ./gradlew clean lint jacocoTestReport
 # 分かったこと
 以下の内容は、100％自信を持ってとは言えない調査レベルで、動作させてみた傾向から以下は言えるだろう、というニュアンスです。
 
-- Jacocoに関して
+- JaCoCoに関して
   - `./gradlew jacocoTestReport` を実施することで、Insttrumentedテストを知なくとも、UIテスト0%の状態で結果を得ることができる。
   - OpenJDKでは動作しない（jdkがAndroid Studioのデフォルトなので、Terminalから動作させる場合のみ注意）
 
@@ -65,6 +65,7 @@ Apache License 2.0 です。詳細はLICENSE を御覧ください。
 
 
 # 参考サイト
+- [The JaCoCo Plugin](https://docs.gradle.org/current/userguide/jacoco_plugin.html)
 - [Test from the command line  |  Android Developers](https://developer.android.com/studio/test/command-line)
 - [Android開発のテストカバー率取得にはこのツールを使い分けると良いという話 - Qiita](https://qiita.com/keidroid/items/adc4f065b84d8a2cd17a)
 
